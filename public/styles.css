@@ -1,0 +1,325 @@
+:root{
+  --brand:#234a45;
+  --brand2:#2f5d57;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --bg:#ffffff;
+  --card:#f5f7f7;
+  --border:#e5e7eb;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.6;
+  text-align:center; /* ✅ center everything by default */
+}
+
+a{color:inherit; text-decoration:none}
+
+.container{
+  max-width:1000px;
+  margin:0 auto;
+  padding:0 18px;
+}
+
+/* --- NAV --- */
+.nav{
+  position:sticky;
+  top:0;
+  background:rgba(255,255,255,.95);
+  border-bottom:1px solid var(--border);
+  backdrop-filter: blur(6px);
+  z-index:10;
+}
+.nav-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 0;
+}
+.brand{
+  font-weight:800;
+  letter-spacing:.2px;
+  color:var(--brand);
+}
+.menu{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  font-weight:600;
+  color:var(--brand);
+  justify-content:center;
+}
+.menu a{
+  padding:8px 10px;
+  border-radius:10px;
+}
+.menu a:hover{background:var(--card)}
+
+/* --- HERO --- */
+.hero{
+  padding:54px 0 28px;
+}
+.hero h1{
+  margin:0 0 8px;
+  font-size:42px;
+  line-height:1.15;
+  color:var(--brand);
+}
+.hero p{
+  margin:0 auto 18px;
+  font-size:18px;
+  color:var(--muted);
+  max-width:760px;
+}
+
+.btn{
+  display:inline-block;
+  background:var(--brand);
+  color:white;
+  padding:12px 16px;
+  border-radius:12px;
+  font-weight:700;
+}
+.btn:hover{background:var(--brand2)}
+
+/* --- SECTIONS --- */
+.section{
+  padding:22px 0;
+}
+.section h2{
+  margin:0 0 12px;
+  color:var(--brand);
+}
+
+/* --- GENERAL TEXT CENTERING --- */
+p, .small{
+  margin-left:auto;
+  margin-right:auto;
+}
+.small{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* --- CARDS / GRID --- */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap:14px;
+  justify-items:center; /* ✅ centers cards in grid */
+}
+.card{
+  width:100%;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:14px;
+  text-align:center; /* ✅ content centered in cards */
+}
+.card h3{
+  margin:0 0 6px;
+  color:var(--brand)
+}
+.card p{
+  margin:0;
+  color:var(--muted)
+}
+
+/* --- FOOTER --- */
+.footer{
+  margin-top:30px;
+  padding:18px 0;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* --- LISTS (center-friendly) --- */
+.list{
+  margin:10px auto 0;
+  padding-left:0;
+  list-style-position: inside;
+  text-align:center;
+}
+.list li{
+  margin:6px 0;
+}
+
+/* --- HR --- */
+hr{
+  border:none;
+  border-top:1px solid var(--border);
+  margin:18px 0;
+}
+
+/* --- Hero layout with image --- */
+.hero-wrap{
+  display:grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap:18px;
+  align-items:center;
+}
+.hero-img{
+  width:100%;
+  border-radius:18px;
+  border:1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  overflow:hidden;
+  background:#fff;
+}
+.hero-img img{
+  width:100%;
+  display:block;
+  max-height:340px;
+  object-fit:cover;
+}
+
+/* --- Badges --- */
+.badge-row{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin:14px 0 0;
+}
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background: var(--card);
+  border:1px solid var(--border);
+  padding:8px 10px;
+  border-radius:999px;
+  font-weight:700;
+  color:var(--brand);
+  font-size:14px;
+}
+.icon{ font-size:18px; }
+
+/* --- Soft mission container --- */
+.bg-soft{
+  background: linear-gradient(180deg, rgba(35,74,69,.06), transparent 65%);
+  border-radius:22px;
+  padding:18px;
+  border:1px solid var(--border);
+}
+
+/* --- Image cards --- */
+.icon-card{
+  text-align:center;
+  padding:18px;
+}
+.icon-card img{
+  width:120px;
+  height:120px;
+  object-fit:contain;
+  margin:6px auto 10px;
+  display:block;
+}
+.icon-card h3{ margin:8px 0 6px; }
+
+/* --- About page layout --- */
+.about-grid{
+  display:grid;
+  grid-template-columns: 320px 1fr;
+  gap:18px;
+  align-items:center;
+}
+.about-grid img{
+  width:100%;
+  border-radius:18px;
+  border:1px solid var(--border);
+  background:#fff;
+}
+
+/* --- FLOW: 3 Safety Steps --- */
+.flow-title-center{ text-align:center; }
+
+.flow-wrap{
+  display:flex;
+  justify-content:center;
+  padding: 6px 0 14px;
+}
+.flow{
+  width: min(720px, 100%);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+}
+
+/* Oval steps */
+.flow-step{
+  width:100%;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 16px 18px;
+  display:flex;
+  flex-direction:column; /* ✅ makes it “poster style” */
+  align-items:center;     /* ✅ centers inside oval */
+  gap:8px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+}
+
+.flow-badge{
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight: 900;
+  color: var(--brand);
+  background: rgba(35,74,69,.12);
+  border: 1px solid rgba(35,74,69,.18);
+  font-size: 18px;
+}
+
+.flow-content h3{
+  margin:0;
+  color: var(--brand);
+  text-align:center;
+}
+.flow-content p{
+  margin:0;
+  color: var(--muted);
+  text-align:center;
+  max-width: 560px;
+}
+
+.flow-arrow{
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(35,74,69,.08);
+  border: 1px dashed rgba(35,74,69,.30);
+  color: var(--brand);
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px){
+  .hero-wrap{ grid-template-columns: 1fr; }
+  .nav-inner{ justify-content:center; flex-direction:column; gap:10px; }
+}
+
+@media (max-width: 800px){
+  .about-grid{ grid-template-columns: 1fr; }
+}
+
+@media (max-width: 520px){
+  .hero h1{ font-size:34px; }
+  .flow-step{ border-radius: 18px; } /* better on small screens */
+  .flow-badge{ width:44px; height:44px; font-size:16px; }
+}

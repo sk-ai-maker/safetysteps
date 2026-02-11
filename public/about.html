@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About - Safety Steps Online</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">Safety Steps Online</div>
+      <nav class="menu">
+        <a href="/">Home</a>
+        <a href="/guide">Guide</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>About Me</h1>
+      <p>Why this site exists and who it’s for.</p>
+    </section>
+
+    <section class="section">
+      <div class="about-grid">
+        <img src="./assets/about-hero.jpg" alt="Cyber safety character">
+        <div class="card">
+          <h2>Meet the Creator</h2>
+          <p>
+            I’m a cybersecurity enthusiast who believes online safety shouldn’t be confusing.
+            I created Safety Steps Online to make online security easier to understand for people
+            of all ages — especially seniors and families who want to protect their privacy.
+          </p>
+         
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">© <span id="y"></span> Safety Steps Online</footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

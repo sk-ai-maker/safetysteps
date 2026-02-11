@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact - Safety Steps Online</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">Safety Steps Online</div>
+      <nav class="menu">
+        <a href="/">Home</a>
+        <a href="/guide">Guide</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Contact Us</h1>
+      <p>If you have questions or feedback, feel free to reach out.</p>
+    </section>
+
+    <section class="section">
+      <div class="grid">
+
+        <!-- Contact Info -->
+        <div class="card">
+          <h3>Contact Information</h3>
+          <p>
+            3575 Fieldgate Drive<br/>
+            Mississauga, ON L4X 2M2<br/>
+            Canada
+          </p>
+          <p><strong>Phone:</strong> 437-601-1006</p>
+          <p><strong>Email:</strong> 1010472@pdsb.net</p>
+        </div>
+
+        <!-- Dummy Contact Form -->
+        <div class="card">
+          <h3>Send a Message</h3>
+
+          <form id="contactForm">
+            <p>
+              <input type="text" id="name" placeholder="Your Name" required
+                style="width:100%; padding:10px; border-radius:10px; border:1px solid #ccc;">
+            </p>
+
+            <p>
+              <input type="email" id="email" placeholder="Your Email" required
+                style="width:100%; padding:10px; border-radius:10px; border:1px solid #ccc;">
+            </p>
+
+            <p>
+              <textarea id="message" placeholder="Your Message" rows="4" required
+                style="width:100%; padding:10px; border-radius:10px; border:1px solid #ccc;"></textarea>
+            </p>
+
+            <p>
+              <button type="submit" class="btn">Submit</button>
+            </p>
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      © <span id="y"></span> Safety Steps Online
+    </footer>
+  </main>
+
+  <script>
+    // Footer year
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Dummy form submit handler
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // stop real submission
+
+      alert("Thank you for contacting us! Someone will reach you shortly.");
+
+      // Clear the form
+      this.reset();
+    });
+  </script>
+</body>
+</html>
